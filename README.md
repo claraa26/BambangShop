@@ -58,12 +58,12 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement delete function in Subscriber repository.`
     -   [x] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [x] Commit: `Create Notification service struct skeleton.`
+    -   [x] Commit: `Implement subscribe function in Notification service.`
+    -   [x] Commit: `Implement subscribe function in Notification controller.`
+    -   [x] Commit: `Implement unsubscribe function in Notification service.`
+    -   [x] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [x] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
     -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -87,5 +87,15 @@ Penggunaan DashMap akan cocok jika ingin melakukan pencarian, penyisipan atau pe
 sering kali menjadi pilihan yang lebih efisien dan praktis. Ini memberikan manfaat yang berdampak pada keamanan dan kinerja.
 
 #### Reflection Publisher-2
-
+1. Seperti yang sudah dipelajari sebelumnya, kita telah mengetahui Single Responsibility Principle (SRP) dimana setiap
+komponen dalam sistem hanya memiliki satu alasan untuk berubah. Hal tersebut mengapa perlu memisahkan antara service dan
+repositori, karna memungkinkan setiap komponen memiliki tanggungjawab yang berbeda-beda
+2. Maka kompleksitas pada model akan meningkat, jika hanya menggunakan model saja tanpa memisahkan ke service atau repositori.
+Secara keseluruhan, setiap model akan menjadi lebih kompleks karena mengambil banyak tanggung jawab di luar representasi data.
+Hal tersebut membuat munculnya duplikasi kode, dan kesulitan dalam testing. Misalnya model produk akan merepresentasikan data produk, 
+dan model ini juga akan menangani tugas-tugas seperti mengirimkan notifikasi kepada pelanggan ketika ada produk baru yang 
+ditambahkan atau mengelola langganan untuk jenis produk tertentu.
+3. Sebenarnya saya pribadi kurang explore dalam penggunaan postman. Namun, sepengetahuan saya postman dapat digunakan untuk
+API testing, dimana request http akan dikirim kan ke API dan dilihat responnya. Selain itu, postman dapat mendukung automated
+testing. 
 #### Reflection Publisher-3
