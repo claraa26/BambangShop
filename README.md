@@ -50,13 +50,13 @@ You can install Postman via this website: https://www.postman.com/downloads/
 ## Mandatory Checklists (Publisher)
 -   [ ] Clone https://gitlab.com/ichlaffterlalu/bambangshop to a new repository.
 -   **STAGE 1: Implement models and repositories**
-    -   [ ] Commit: `Create Subscriber model struct.`
-    -   [ ] Commit: `Create Notification model struct.`
-    -   [ ] Commit: `Create Subscriber database and Subscriber repository struct skeleton.`
-    -   [ ] Commit: `Implement add function in Subscriber repository.`
-    -   [ ] Commit: `Implement list_all function in Subscriber repository.`
-    -   [ ] Commit: `Implement delete function in Subscriber repository.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
+    -   [x] Commit: `Create Subscriber model struct.`
+    -   [x] Commit: `Create Notification model struct.`
+    -   [x] Commit: `Create Subscriber database and Subscriber repository struct skeleton.`
+    -   [x] Commit: `Implement add function in Subscriber repository.`
+    -   [x] Commit: `Implement list_all function in Subscriber repository.`
+    -   [x] Commit: `Implement delete function in Subscriber repository.`
+    -   [x] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
     -   [ ] Commit: `Create Notification service struct skeleton.`
     -   [ ] Commit: `Implement subscribe function in Notification service.`
@@ -77,6 +77,14 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. Tergantung kegunaan, jika hanya terdapat satu jenis subscriber saja mungkin cukup hanya dengan single model struct.
+Namun jika menggunakan single model struct saja sudah memenuhi requirement, maka dapat menggunakan itu saja karna cenderung sederhana
+2. Vec digunakan ketika ingin menyimpan suatu elemen pada memori yang bersebelahan. Selain itu Vec juga efisien untuk mencari
+atau melakukan perulangan untuk elemen pada blok memori yang bersebelahan. Namun, untuk mencari elemen berdasarkan id atau url
+Vec membutuhkan perulangan secara keseluruhan sehingga membuatnya menjadi tidak efisien apalagi jika datanya besar.</br>
+Penggunaan DashMap akan cocok jika ingin melakukan pencarian, penyisipan atau pengahapusan berdasarkan id atau url, sehingga lebih efisien
+3. Pola Singleton dapat diimplementasikan di Rust. Namun, menggunakan struktur data yang aman untuk thread seperti DashMap 
+sering kali menjadi pilihan yang lebih efisien dan praktis. Ini memberikan manfaat yang berdampak pada keamanan dan kinerja.
 
 #### Reflection Publisher-2
 
