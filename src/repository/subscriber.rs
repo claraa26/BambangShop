@@ -1,6 +1,6 @@
 use dashmap::DashMap;
 use lazy_static::lazy_static;
-use create::model::subscriber::Subscriber;
+use crate::model::subscriber::Subscriber;
 
 // Singleton of Database
 lazy_static!{
@@ -12,8 +12,8 @@ pub struct SubscriberRepository;
 impl SubscriberRepository {
     pub fn add(product_type: &str, subscriber: Subscriber) -> Subscriber{
         let subscriber_value = subscriber.clone();
-        if SUBSCRIBER.get(product_type).is_none(){
-            SUBSCRIBER.insert(String::from(product_type), DashMap::new());
+        if SUBSCRIBERS.get(product_type).is_none(){
+            SUBSCRIBERS.insert(String::from(product_type), DashMap::new());
         };
 
         SUBSCRIBERS.get(product_type).unwrap()

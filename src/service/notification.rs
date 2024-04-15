@@ -5,7 +5,7 @@ use rocket::http::Status;
 use crate::model::notification::Notification;
 use crate::model::product::Product;
 use crate::model::subscriber::Subscriber;
-use crate::model::repository::subscriber::SubscriberRepository;
+use crate::repository::subscriber::SubscriberRepository;
 
 pub struct NotificationService;
 
@@ -35,7 +35,7 @@ impl NotificationService {
             product_title: product.clone().title,
             product_type: String::from(product_type),
             product_url: product.clone().get_url(),
-            subscriber_nama: String::from(""),
+            subscriber_name: String::from(""),
             status: String::from(status)
         };
 
