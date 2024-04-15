@@ -99,3 +99,12 @@ ditambahkan atau mengelola langganan untuk jenis produk tertentu.
 API testing, dimana request http akan dikirim kan ke API dan dilihat responnya. Selain itu, postman dapat mendukung automated
 testing. 
 #### Reflection Publisher-3
+1. Pada tutorial ini menggunakan model push dari observer pattern. Dimana ketika produk baru ditambhkan, maka sistem akan
+mengirimkan notifikasi kepada subscribers. Sehingga subscriber tidak perlu request ke publisher. 
+2. Keuntungan menggunakan Pull mode adalah subscribers hanya akan meminta data ketika membutuhkan saja dan lebih fleksibel 
+karena dapat mengatur kapan membutuhkan data tersebut. Lebih efisien dan mengurangi network traffic.</br>
+Kekurangannya lebih kompleks dibanding push model dalam penerapannya, subscriber harus sering-sering mengirim request untuk
+mendapatkan pembaruan.
+3. Dengan tidak menggunakan multi-threading pada notifikasi akan membuat kinerja, responsiveness, dan scalability pada 
+suatu program berkurang. Karena dengan multi-threading memungkinkan untuk mengeksekusi proses notifikasi secara bersamaan.
+4. 
